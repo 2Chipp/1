@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <title>Unity WebGL Player | My project</title>
+    <title>Unity WebGL Player | Rotar</title>
     <link rel="shortcut icon" href="TemplateData/favicon.ico">
     <link rel="stylesheet" href="TemplateData/style.css">
   </head>
@@ -19,7 +19,8 @@
       <div id="unity-warning"> </div>
       <div id="unity-footer">
         <div id="unity-webgl-logo"></div>
-        <div id="unity-build-title">My project</div>
+        <div id="unity-fullscreen-button"></div>
+        <div id="unity-build-title">Rotar</div>
       </div>
     </div>
     <script>
@@ -62,7 +63,7 @@
         codeUrl: buildUrl + "/Build.wasm",
         streamingAssetsUrl: "StreamingAssets",
         companyName: "DefaultCompany",
-        productName: "My project",
+        productName: "Rotar",
         productVersion: "0.1",
         showBanner: unityShowBanner,
       };
@@ -96,6 +97,9 @@
 
         canvas.style.width = "1280px";
         canvas.style.height = "720px";
+      }
+      if(UnityLoader.SystemInfo.mobile == true){
+        ScreenOrientation.lock('landscape');
       }
 
       loadingBar.style.display = "block";
