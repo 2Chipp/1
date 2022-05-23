@@ -8,66 +8,8 @@
     <link rel="stylesheet" href="TemplateData/style.css">
   </head>
   <body>
-    
-    <style type="text/css">
-      #container { display:block; }
-      @media only screen and (orientation:portrait){
-         #container {  
-               -webkit-transform: rotate(90deg);
-               -moz-transform: rotate(90deg);
-               -o-transform: rotate(90deg);
-               -ms-transform: rotate(90deg);
-               transform: rotate(90deg);
-              }
-
-      }
-      @media only screen and (orientation:landscape){
-         #container {  
-               -webkit-transform: rotate(0deg);
-               -moz-transform: rotate(0deg);
-               -o-transform: rotate(0deg);
-               -ms-transform: rotate(0deg);
-               transform: rotate(0deg);
-              }
-      }
- </style>
- <br>
- <br>
- <br>
- <br>
- <br>
- <br>
- <br>
- <br>
- <br>
- <br>
- <br>
- <br>
- <br>
- <br>
- <br>
- <br>
- <br>
- <br>
- <br>
- <br>
- <br>
- <br>
- <br>
- <br>
- <br>
- <br>
- <br>
- <br>
- <br>
- <br>
- <br>
- <br>
- <br>
-    <div id="container">
-
     <div id="unity-container" class="unity-desktop">
-      <canvas id="unity-canvas" width=1280 height=720></canvas>
+      <canvas id="unity-canvas" width=1080 height=720></canvas>
       <div id="unity-loading-bar">
         <div id="unity-logo"></div>
         <div id="unity-progress-bar-empty">
@@ -81,8 +23,6 @@
         <div id="unity-build-title">Rotar</div>
       </div>
     </div>
-
-  </div> 
     <script>
       var container = document.querySelector("#unity-container");
       var canvas = document.querySelector("#unity-canvas");
@@ -116,11 +56,11 @@
       }
 
       var buildUrl = "Build";
-      var loaderUrl = buildUrl + "/buil.C.loader.js";
+      var loaderUrl = buildUrl + "/buildImagen.loader.js";
       var config = {
-        dataUrl: buildUrl + "/buil.C.data",
-        frameworkUrl: buildUrl + "/buil.C.framework.js",
-        codeUrl: buildUrl + "/buil.C.wasm",
+        dataUrl: buildUrl + "/buildImagen.data.gz",
+        frameworkUrl: buildUrl + "/buildImagen.framework.js.gz",
+        codeUrl: buildUrl + "/buildImagen.wasm.gz",
         streamingAssetsUrl: "StreamingAssets",
         companyName: "DefaultCompany",
         productName: "Rotar",
@@ -155,7 +95,7 @@
       } else {
         // Desktop style: Render the game canvas in a window that can be maximized to fullscreen:
 
-        canvas.style.width = "1280px";
+        canvas.style.width = "1080px";
         canvas.style.height = "720px";
       }
 
@@ -176,7 +116,6 @@
         });
       };
       document.body.appendChild(script);
-
     </script>
   </body>
 </html>
